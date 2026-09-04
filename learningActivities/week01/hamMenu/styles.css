@@ -1,0 +1,8 @@
+body{
+    width: 640px;
+    margin: auto;
+}
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+}
