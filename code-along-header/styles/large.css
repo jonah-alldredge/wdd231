@@ -6,9 +6,11 @@
     header{
         grid-template-columns: 24px auto;
     }
+/***************    Hamburger   *****************/
     .hamburger {
         display: none;
     }
+/***************    Navigation   *****************/
     .navigation{
         display: block;
         border-bottom: solid 1px #eee;
@@ -19,4 +21,5 @@
     .navigation a{
         border: none;
     }
+
 }

@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jonah Alldredge">
-    <meta name="description" content="This is my home page for WDD231">
-
+    <meta name="description" content="This is my home page for WDD231. Throughout the course I will be adding to it and including all my later projects">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/index.js" defer></script>
     <title>Home Page</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512px" height="512px">
+        <span>Jonah Alldredge</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#" id="current">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
     <main>
-        <h1></h1>
-        <section>
-        <h2>
-
-        </h2>
+        <h1>Home</h1>
+        <div class="info-card">
+        <section class="card">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam animi illum fugit dignissimos aspernatur sunt distinctio, excepturi ullam hic, iste, perferendis porro eum dolorum earum id libero quibusdam culpa mollitia?</p>
         </section>
-        <section>
-        <h2>
-
-        </h2>
+        <section class="card">
+        <h2>Student Photo</h2>
+        <img src="images/profile.jpg" alt="Profile Picture">
         </section>
+        </div>
         <section>
-        <h2>
-
-        </h2>
+        <h2>Web Certificate Courses</h2>
+        <div id="all-courses" class="courses"><p>All Courses</p></div>
+        <div id="wdd-courses" class="courses"><p></p></div>
+        <div id="cse-courses" class="courses"></div>
+        <p id="courses-num"></p>
         </section>
     </main>
     <footer>
-        <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16"height="16"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
         <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
-        <a href="https://www.snapchat.com/" target="_blank"><img src="images/twitch.svg" alt="Twitch" width="16"height="16"></a>
+        <a href="https://www.snapchat.com/" target="_blank"><img src="images/twitch.svg" alt="Twitch" width="16" height="16"></a>
+        <a href="https://www.snapchat.com/" target="_blank"><img src="images/snapchat.svg" alt="Snapchat" width="16" height="16"></a>
         <div>
             <p>&copy;<span id="currentYear"></span> Jonah Alldredge  Utah, United States</p>
             <p id="lastModified"></p>
         </div>
     
     </footer>
-    <script src="scripts/index.js"></script>
+    
 </body>
 </html>

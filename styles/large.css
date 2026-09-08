@@ -1,0 +1,25 @@
+@media only screen and (min-width: 800px) {
+    /***************    Hamburger   *****************/
+        .hamburger {
+            display: none;
+        }
+        .navigation{
+            display: block;
+        }
+        .navigation ul{
+            display: flex;
+        }
+        .navigation li{
+            margin: 1rem;
+        }
+        .navigation a{
+            border: none;
+        }
+    
+        /***************    Navigation   *****************/
+        .info-card{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 2rem;
+        }
+}

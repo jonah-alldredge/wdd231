@@ -1,0 +1,103 @@
+/*
+Color Schema:
+        Aqua
+        rgb(222, 220, 255)
+*/
+
+body{
+    margin: auto;
+}
+header{
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    column-gap: 2rem;
+    background-color: rgb(222, 220, 255);
+    padding: 5px;
+}
+header img{
+    width: 48px;
+    height: 48px;
+}
+header span{
+    font-size: 1.2rem;
+    color: black;
+}
+/**************    Hamburger     ***************/
+.hamburger{
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger::before{
+    content: "\2630";
+}
+.hamburger.show::before{
+    content: "\00D7";
+}
+/****************   Navigation    ****************/
+.navigation{
+    display: none;
+}
+.navigation.show{
+    display: block;
+}
+
+.navigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(222, 220, 255);
+}
+.navigation li{
+    padding: 5px;
+    margin:auto;
+}
+.navigation a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.navigation a:hover{
+    cursor: pointer;
+}
+/*****************  Main Info   *****************/
+main section{
+    background-color: rgb(222, 220, 255);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.info-card{
+    /* display: flex; */
+    justify-content: space-evenly;
+}
+.card{
+    height: 300px;
+    width: auto;
+}
+main h2{
+    background-color: aqua;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+}
+main section, h2{
+    border-radius: 10px 10px 0 0;
+}
+main img{
+    width: auto;
+    height: 225px;
+    padding: 1rem;
+}
+
+/***************    Footer    ***************/
+footer{
+    text-align: center;
+}
+footer div{
+    background-color: rgb(222, 220, 255);
+    padding: 5px;
+}
