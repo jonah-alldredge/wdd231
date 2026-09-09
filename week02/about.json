@@ -1,0 +1,50 @@
+{
+    "family_name":"Alldredge",
+    "moved_in_date":"4/05/2005",
+    "number_of_people":"8",
+    "visited_by_bishopric": true,
+    "family_members": [
+            {
+
+                "name":"Sam",
+                "gender":"Male",
+                "birthdate":"06/22/1973"
+            },
+            {
+                "name":"Laurel",
+                "gender":"Female",
+                "birthdate":"4/19/1973"
+            },
+            {
+                "name":"Kelly",
+                "gender":"Female",
+                "birthdate":"10/17/1996"
+            },
+            {
+                "name":"Bentley",
+                "gender":"Male",
+                "birthdate":"03/09/1999"
+            },
+            {
+                "name":"Jarom",
+                "gender":"Male",
+                "birthdate":"11/20/2000"
+            },
+            {
+                "name":"Jonah",
+                "gender":"Male",
+                "birthdate":"12/17/2004"
+            },
+            {
+                "name":"Teron",
+                "gender":"Male",
+                "birthdate":"04/17/2007"
+            },
+            {
+                "name":"Mary",
+                "gender":"Female",
+                "birthdate":"04/06/2009"
+            }
+        ]
+
+}
