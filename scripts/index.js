@@ -2,6 +2,11 @@ const lastModified = new Date();
 const currentYear = new Date().getFullYear();
 const navButton = document.querySelector("#ham-btn");
 const navBar = document.querySelector("#nav-bar");
+const totalCredits = document.querySelector("#courses-num");
+const totalCourses = document.querySelector("#courses");
+const allButton = document.querySelector("#all-courses");
+const wddButton = document.querySelector("#wdd-courses");
+const cseButton = document.querySelector("#cse-courses");
 
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 document.getElementById("currentYear").textContent = currentYear;
@@ -10,6 +15,7 @@ navButton.addEventListener('click', () => {
     navButton.classList.toggle('show');
     navBar.classList.toggle('show');
 })
+
 
 
 const courses = [
@@ -91,3 +97,60 @@ const courses = [
         completed: false
     }
 ]
+
+function filteredWddCourses(courses) {
+    return courses.subject === "WDD";
+}
+function filteredCseCourses(courses) {
+    return courses.subject === "CSE";
+}
+
+createClass(courses);
+const credit = courses.reduce((sum, course) => sum + course.credits, 0);
+const text = document.querySelector("#courses-num");
+text.textContent = `The total number of credits listed below is: ${credit}`;
+
+allButton.addEventListener('click', () => {
+    const credit = courses.reduce((sum, course) => sum + course.credits, 0);
+    const text = document.querySelector("#courses-num");
+    text.textContent = `The total number of credits listed below is: ${credit}`;
+    createClass(courses);
+})
+wddButton.addEventListener('click', () => {
+    const classes = courses.filter((courses) => courses.subject === "WDD");
+    const credit = classes.reduce((sum, course) => sum + course.credits, 0);
+    const text = document.querySelector("#courses-num");
+    text.textContent = `The total number of credits listed below is: ${credit}`;
+    createClass(classes);
+})
+cseButton.addEventListener('click', () => {
+    const classes = courses.filter((courses) => courses.subject === "CSE");
+    const credit = classes.reduce((sum,course) => sum + course.credits,0);
+    const text = document.querySelector("#courses-num");
+    text.textContent = `The total number of credits listed below is: ${credit}`;
+    createClass(classes);
+})
+
+function createClass(filteredClass) {
+    document.getElementById("classes").innerHTML = "";
+    filteredClass.forEach(course => {
+        const classes = document.getElementById("classes");
+        const div = document.createElement("div");
+        const text = document.createElement("p");
+        classes.appendChild(div);
+        div.appendChild(text);
+        let complete = "";
+        if (isComplete(course)) {
+            complete = "\u2713";
+        }
+        text.textContent = `${complete}${course.subject} ${course.number}`;
+    });
+}
+
+function totalNumCredits(accumulator, element) {
+    return accumulator + element
+}
+
+function isComplete(course) {
+    return course.completed;
+}

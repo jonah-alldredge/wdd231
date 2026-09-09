@@ -63,8 +63,12 @@ header span{
 }
 .navigation a:hover{
     cursor: pointer;
+    color: aliceblue;
 }
 /*****************  Main Info   *****************/
+main h1{
+    margin-left: 1rem;
+}
 main section{
     background-color: rgb(222, 220, 255);
     text-align: center;
@@ -91,6 +95,14 @@ main img{
     width: auto;
     height: 225px;
     padding: 1rem;
+}
+.course{
+    display: block;
+
+}
+.courses{
+    padding: 1rem;
+    margin: 1rem;
 }
 
 /***************    Footer    ***************/
