@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jonah Alldredge">
-    <meta name="description" content="The directory for my chamber of commerce website.">
+    <meta name="description" content="The directory for my chamber of commerce website. This page is designed to display a few of the local businesses involved in our cause">
     <meta property="og:title" content="Directory page for website">
     <meta property="og:description" content="A directory page for a local Chamber of Commerce">
     <meta property="og:image" content="">
-    <meta property="og:url" content="">
+    <meta property="og:url" content="https://jonah-alldredge.github.io/wdd231/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/base.css">
     <title>Directory</title>
@@ -16,13 +19,41 @@
 </head>
 <body>
     <header>
-        
+        <img src="images/directory-icon.svg" alt="Directory Logo" width="512" height="512">
+        <span>Apex Regional Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger"></button>
     </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#" id="current">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
     <main>
-
+        <h1>Directory</h1>
+        <button id="grid">Grid</button>
+        <button id="list">List</button>
+        <section id="card-layout" class="section"></section>
     </main>
     <footer>
-
+        <p><span>Apex Regional Chamber of Commerce</span></p>
+        <p>1428 Innovation Parkway</p>
+        <p>Suite 300, Summit City, SC</p>
+        <p>contact@apexchamber.org</p>
+        <p>(555)-019-2834</p>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../images/linkedin.svg" alt="LinkedIn" width="16"
+                height="16"></a>
+        <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
+        <a href="https://www.twitch.com/" target="_blank"><img src="images/twitch.svg" alt="Twitch" width="16"
+                height="16"></a>
+        <a href="https://www.snapchat.com/" target="_blank"><img src="images/snapchat.svg" alt="Snapchat" width="16"
+                height="16"></a>
+        <div>
+            <p>&copy;<span id="currentYear"></span> Jonah Alldredge Utah, United States</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 </html>

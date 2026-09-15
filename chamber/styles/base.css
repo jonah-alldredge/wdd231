@@ -1,0 +1,91 @@
+/*
+Color Schema: 
+        Aqua 
+        rgb(222, 220, 255)
+
+*/
+
+body {
+    margin: auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    column-gap: 2rem;
+    background-color: rgb(222, 220, 255);
+    padding: 5px;
+}
+
+header img {
+    width: 32px;
+    height: 32px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: black;
+}
+/**************    Hamburger     ***************/
+.hamburger {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+/****************   Navigation    ****************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(222, 220, 255);
+}
+
+.navigation li {
+    padding: 5px;
+    margin: auto;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation a:hover {
+    cursor: pointer;
+    color: aliceblue;
+}
+/*****************  Main Info   *****************/
+main h1 {
+    margin-left: 1rem;
+}
+
+/***************    Footer    ***************/
+footer {
+    text-align: center;
+}
+
+footer div {
+    background-color: rgb(222, 220, 255);
+    padding: 5px;
+}
