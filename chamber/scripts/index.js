@@ -13,36 +13,47 @@ navButton.addEventListener('click', () => {
 
 
 
+async function getCompany() {
+    const data = await fetch('data/members.json');
+    const companies = await data.json();
+    console.log(companies);
+    return companies;
+    }
+// const companies = fetch('data/members.json').then(response => response.json())
+//     .then(values => values.forEach(value => console.log(value.name)))
 
-// function createCard() {
-//     // async function getCompany() {
-//         // const data = await fetch('data/members.json');
-//         // const companies = await data.json();
-//         // // console.log(companies);
-//         // return companies;
-//         // }
-//     const companies = fetch('data/members.json').then(response => response.json())
-//         .then(values => values.forEach(value => console.log(value.name)))
-//         .catch(error => console.log(error));
-//     companies.forEach(company => {
-//         const section = document.querySelector("card-layout")
-//         const name = document.createElement("h2");
-//         const tagLine = document.createElement("p");
-//         const div = document.createElement("div");
-//         const img = document.createElement("img");
-//         const email = document.createElement("p");
-//         const phone = document.createElement("p");
-//         const url = document.createElement("p");
-//         const span = document.createElement("span");
-//         section.appendChild(name);
-//         section.appendChild(tagLine);
-//         section.appendChild(div);
-//         div.appendChild(img);
-//         div.appendChild(email);
-//         div.appendChild(phone);
-//         div.appendChild(url);
-//         url.appendChild(span);
-//     });
-// };
+//     .then().catch(error => console.log(error));
 
-// createCard();
+async function createCard() {
+    const companies = await getCompany();
+    companies.forEach(company => {
+        const card = document.querySelector("#card-layout");
+        const section = document.createElement("section");
+        const name = document.createElement("h3");
+        const tagLine = document.createElement("p");
+        const div = document.createElement("div");
+        const img = document.createElement("img");
+        const email = document.createElement("p");
+        const phone = document.createElement("p");
+        const url = document.createElement("p");
+        card.appendChild(section);
+        section.appendChild(name);
+        section.appendChild(tagLine);
+        section.appendChild(div);
+        div.appendChild(img);
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("src", "images/business.jpg");
+        img.setAttribute("alt", "Company Picture");
+        div.appendChild(email);
+        div.appendChild(phone);
+        div.appendChild(url);
+        name.textContent = company.name;
+        tagLine.textContent = company.tagLine;
+        email.innerHTML = `<strong>EMAIL:</strong> ${company.email}`;
+        phone.innerHTML = `<strong>PHONE:</strong> ${company.phone}`;
+        url.innerHTML = `<strong>URL:</strong> ${company.url}`;
+    })
+};
+
+
+createCard();

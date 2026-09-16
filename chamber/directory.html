@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
     <title>Directory</title>
     <script src="scripts/index.js" defer></script>
 </head>
@@ -22,37 +23,43 @@
         <img src="images/directory-icon.svg" alt="Directory Logo" width="512" height="512">
         <span>Apex Regional Chamber of Commerce</span>
         <button id="ham-btn" class="hamburger"></button>
-    </header>
-    <nav id="nav-bar" class="navigation">
-        <ul>
+        <nav id="nav-bar" class="navigation">
+            <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#" id="current">Directory</a></li>
+            <li><a href="#" class="current">Directory</a></li>
             <li><a href="#">Join</a></li>
             <li><a href="#">Discover</a></li>
         </ul>
     </nav>
+</header>
     <main>
         <h1>Directory</h1>
+        <div>
         <button id="grid">Grid</button>
         <button id="list">List</button>
-        <section id="card-layout" class="section"></section>
+        </div>
+        <div id="card-layout" class="card-layout"></div>
     </main>
     <footer>
-        <p><span>Apex Regional Chamber of Commerce</span></p>
-        <p>1428 Innovation Parkway</p>
-        <p>Suite 300, Summit City, SC</p>
-        <p>contact@apexchamber.org</p>
-        <p>(555)-019-2834</p>
-        <a href="https://www.linkedin.com/" target="_blank"><img src="../images/linkedin.svg" alt="LinkedIn" width="16"
-                height="16"></a>
-        <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
-        <a href="https://www.twitch.com/" target="_blank"><img src="images/twitch.svg" alt="Twitch" width="16"
-                height="16"></a>
-        <a href="https://www.snapchat.com/" target="_blank"><img src="images/snapchat.svg" alt="Snapchat" width="16"
-                height="16"></a>
         <div>
-            <p>&copy;<span id="currentYear"></span> Jonah Alldredge Utah, United States</p>
-            <p id="lastModified"></p>
+            <section>
+                <p><span>Apex Regional Chamber of Commerce</span></p>
+                <p>1428 Innovation Parkway</p>
+                <p>Suite 300, Summit City, SC</p>
+                <p>contact@apexchamber.org</p>
+                <p>(555)-019-2834</p>
+            </section>
+            <section>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="48"height="48"></a>
+                <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="48" height="48"></a>
+                <a href="https://www.twitch.com/" target="_blank"><img src="images/twitch.svg" alt="Twitch" width="48" height="48"></a>
+            </section>
+            <section>
+                    <p>WDD231 Class Project</p>
+                    <p>Jonah Alldredge</p>
+                    <p>&copy;<span id="currentYear"></span> Apex Regional Chamber of Commerce</p>
+                    <p id="lastModified"></p>
+            </section> 
         </div>
     </footer>
 </body>

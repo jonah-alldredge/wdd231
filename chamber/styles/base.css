@@ -7,16 +7,17 @@ Color Schema:
 
 body {
     margin: auto;
+    max-width: 1400px;
 }
 
 header {
     display: grid;
-    grid-template-columns: 24px auto 44px;
-    padding: 5px 0 5px 10px;
+    grid-template-columns: 24px auto auto;
+    padding: 2rem 2rem 1rem 2rem;
     align-items: end;
     column-gap: 2rem;
     background-color: rgb(222, 220, 255);
-    padding: 5px;
+    /* padding: 1rem; */
 }
 
 header img {
@@ -48,18 +49,16 @@ header span {
 .navigation {
     display: none;
 }
-
 .navigation.show {
     display: block;
 }
-
 .navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: rgb(222, 220, 255);
+    
 }
-
 .navigation li {
     padding: 5px;
     margin: auto;
@@ -75,17 +74,51 @@ header span {
     cursor: pointer;
     color: aliceblue;
 }
+.navigation .current {
+    text-decoration: underline;
+}
 /*****************  Main Info   *****************/
 main h1 {
     margin-left: 1rem;
 }
-
+main button {
+    padding: 1rem;
+    font-size: 100%;
+}
+main div {
+    margin: auto;
+    text-align: center;
+}
+.card-layout{
+    justify-content: space-evenly;
+    row-gap: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+.card-layout section{
+    background-color: aqua;
+    border-radius: 10px;
+    margin: 1rem;    
+    margin: auto;
+    width: 420px;
+    height: 261px;
+}
+.card-layout div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: left;
+    text-align: left;
+}
+.card-layout img {
+    grid-row: 1/ span 3;
+    width: 125px;
+    padding: 1rem;
+}
+.card-layout section p {
+    margin: 10px;
+}
 /***************    Footer    ***************/
 footer {
     text-align: center;
-}
-
-footer div {
     background-color: rgb(222, 220, 255);
-    padding: 5px;
+    padding: 10px 0 10px 0;
 }

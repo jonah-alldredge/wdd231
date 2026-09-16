@@ -1,29 +1,42 @@
-@media only screen and (min-width:800px){
-        /***************    Hamburger   *****************/
-            .hamburger {
-                display: none;
+@media only screen and (min-width:900px){
+    /***************    Hamburger   *****************/
+        .hamburger {
+            display: none;
+        }
+    
+        .navigation{
+            display: block;
+        }
+    
+        .navigation ul {
+            display: flex;
+        }
+        .navigation a {
+            border: none;
+        }
+            
+    /***********    Main    ***********/
+        .card-layout {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+        }
+
+    /****************   Footer    *****************/
+        footer div {
+            display: flex;
+        }
+        footer section {
+            padding: 1rem;
+            text-align: left;
             }
-        
-            .navigation ul li{
-                display: block;
-            }
-        
-            .navigation ul {
-                display: flex;
-            }
-        
-            .navigation li {
-                margin: 1rem;
-            }
-        
-            .navigation a {
-                border: none;
-            }
-        
-            /***************    Navigation   *****************/
-            .info-card {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                column-gap: 2rem;
-            }
+        footer div {
+            justify-content: center;
+            padding: 1rem;
+            align-items: center;
+        }
+}
+@media only screen and (min-width:1200px){
+    .card-layout {
+        grid-template-columns: repeat(3, auto);
+    }
 }
