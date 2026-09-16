@@ -4,12 +4,10 @@ Color Schema:
         rgb(222, 220, 255)
 
 */
-
 body {
     margin: auto;
     max-width: 1400px;
 }
-
 header {
     display: grid;
     grid-template-columns: 24px auto auto;
@@ -17,14 +15,11 @@ header {
     align-items: end;
     column-gap: 2rem;
     background-color: rgb(222, 220, 255);
-    /* padding: 1rem; */
 }
-
 header img {
     width: 32px;
     height: 32px;
 }
-
 header span {
     font-size: 1.2rem;
     color: black;
@@ -102,11 +97,15 @@ main div {
     width: 420px;
     height: 261px;
 }
+.card-layout h3, p {
+    margin: 5px;
+}
 .card-layout div {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: left;
     text-align: left;
+    margin-top: 1rem;
 }
 .card-layout img {
     grid-row: 1/ span 3;
@@ -115,6 +114,12 @@ main div {
 }
 .card-layout section p {
     margin: 10px;
+}
+.card-layout.grid{
+    display: grid;
+}
+.card-layout.list{
+    display: block;
 }
 /***************    Footer    ***************/
 footer {

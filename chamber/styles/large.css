@@ -39,4 +39,5 @@
     .card-layout {
         grid-template-columns: repeat(3, auto);
     }
+    
 }

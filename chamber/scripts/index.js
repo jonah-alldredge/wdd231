@@ -2,6 +2,9 @@ const lastModified = new Date();
 const currentYear = new Date().getFullYear();
 const navButton = document.querySelector("#ham-btn");
 const navBar = document.querySelector("#nav-bar");
+const gridButton = document.querySelector("#grid-btn");
+const listButton = document.querySelector("#list-btn");
+const cardLayout = document.querySelector("#card-layout");
 
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 document.getElementById("currentYear").textContent = currentYear;
@@ -11,6 +14,15 @@ navButton.addEventListener('click', () => {
     navBar.classList.toggle('show');
 })
 
+gridButton.addEventListener('click', () => {
+    cardLayout.classList.add('grid');
+    cardLayout.classList.remove('list');
+})
+
+listButton.addEventListener('click', () => {
+    cardLayout.classList.add('list');
+    cardLayout.classList.remove('grid');    
+})
 
 
 async function getCompany() {
