@@ -24,17 +24,12 @@ listButton.addEventListener('click', () => {
     cardLayout.classList.remove('grid');    
 })
 
-
 async function getCompany() {
     const data = await fetch('data/members.json');
     const companies = await data.json();
     console.log(companies);
     return companies;
     }
-// const companies = fetch('data/members.json').then(response => response.json())
-//     .then(values => values.forEach(value => console.log(value.name)))
-
-//     .then().catch(error => console.log(error));
 
 async function createCard() {
     const companies = await getCompany();
@@ -67,5 +62,5 @@ async function createCard() {
     })
 };
 
-
 createCard();
+

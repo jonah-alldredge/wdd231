@@ -21,6 +21,12 @@
             grid-template-columns: repeat(2, auto);
         }
 
+
+    /****************   HOME PAGE CARD LAYOUT   *********************/
+       
+        
+
+
     /****************   Footer    *****************/
         footer div {
             display: flex;

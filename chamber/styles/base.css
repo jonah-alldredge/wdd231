@@ -120,6 +120,21 @@ main div {
 .card-layout.list{
     display: block;
 }
+
+
+/*****************  HOME PAGE CARD LAYOUT   *******************/
+
+main h2 {
+    background-color: rgb(222, 220, 255);
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+main section {
+    background-color: aqua;
+    border-radius: 10px;
+}
+
 /***************    Footer    ***************/
 footer {
     text-align: center;

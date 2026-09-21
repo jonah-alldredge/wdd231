@@ -21,7 +21,7 @@ async function apiFetch() {
 
 function displayResults(data) {
     const temp = data.main.temp;
-    currentTemp.textContent = `${temp}\u00B0diF`;
+    currentTemp.textContent = `${temp}\u00B0F`;
 }
 
 apiFetch();

@@ -17,20 +17,70 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
     <title>Home</title>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
 <body>
     <header>
-
+        <img src="images/directory-icon.svg" alt="Directory Logo" width="512" height="512">
+        <span>Apex Regional Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="#"  class="current">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
+    <main>
+        <h1>Home</h1>
+        <section class="hero">
+            <h2>Want to join the cause to improve the businesses in your area?</h2>
+            <img src="" alt="">
+            <button id="action">Click Here</button>
+        </section>
+        <div class="main-content">
+            <section class="events">
+                <h2>Chamber Events</h2>
+            </section>
+            <section class="weather">
+                <h2>Weather</h2>
+                <p>The current temperature in Provo, Utah is <span id="current-temp"></span></p>
+                
+            </section>
+        </div>
+        <section class="spotlight">
+            <h2>Member Spotlight:</h2>
+            <div id="card-layout" class="spotlight-layout">
 
-    </nav>
-    <body>
-        
-    </body>
+            </div>
+        </section>
+    </main>
     <footer>
-        
+        <div>
+            <section>
+                <p><span>Apex Regional Chamber of Commerce</span></p>
+                <p>1428 Innovation Parkway</p>
+                <p>Suite 300, Summit City, SC</p>
+                <p>contact@apexchamber.org</p>
+                <p>(555)-019-2834</p>
+            </section>
+            <section>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="48"
+                        height="48"></a>
+                <a href="https://github.com/" target="_blank"><img src="images/github.svg" alt="GitHub" width="48"
+                        height="48"></a>
+                <a href="https://www.twitch.com/" target="_blank"><img src="images/twitch.svg" alt="Twitch" width="48"
+                        height="48"></a>
+            </section>
+            <section>
+                <p>WDD231 Class Project</p>
+                <p>Jonah Alldredge</p>
+                <p>&copy;<span id="currentYear"></span> Apex Regional Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </section>
+        </div>
     </footer>
 </body>
 </html>
