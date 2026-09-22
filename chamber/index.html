@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jonah Alldredge">
-    <meta name="description"
-        content="The directory for my chamber of commerce website. This page is designed to display a few of the local businesses involved in our cause">
+    <meta name="description" content="The home page for my chamber of commerce website. This page is designed to be the place where we recruit new businesses">
     <meta property="og:title" content="Directory page for website">
     <meta property="og:description" content="A directory page for your local Chamber of Commerce!">
     <meta property="og:image" content="https://jonah-alldredge.github.io/wdd231/chamber/images/draper-temple.jpg">
@@ -16,6 +15,7 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/home.css">
     <title>Home</title>
     <script src="scripts/home.js" defer></script>
 </head>
@@ -41,19 +41,39 @@
             <button id="action">Click Here</button>
         </section>
         <div class="main-content">
-            <section class="events">
+            <section>
                 <h2>Chamber Events</h2>
+                <div class="events">
+                    <div>
+                        <h3>Annual Business Expo</h3>
+                        <p>Saturday, Nov 7 | 10:00 AM – 4:00 PM</p>
+                        <p>Explore vendor booths, attend free workshops, and connect with local businesses.</p>
+                    </div>
+                    <div>
+                        <h3>Monthly Networking Breakfast</h3>
+                        <p>Thursday, Oct 15 | 7:30 AM – 9:00 AM</p>
+                        <p>Connect with local entrepreneurs and share your 30-second pitch over apple juice.</p>
+                    </div>
+                </div>
             </section>
             <section class="weather">
                 <h2>Weather</h2>
-                <p>The current temperature in Provo, Utah is <span id="current-temp"></span></p>
-                
+                <div class="weather-box">
+                    <div class="current-weather">
+                        <h3>Current Weather</h3>
+                        <p>Provo, Utah: <span id="current-temp"></span></p>
+                        <p id="current-forecast"></p>
+                        <img id="weather-icon" src="" alt="">
+                    </div>
+                    <div id="future-forecast" class="future-forecast">
+                        <h3>3-Day Forecast for Provo</h3>
+                    </div>
+                </div>
             </section>
         </div>
         <section class="spotlight">
             <h2>Member Spotlight:</h2>
             <div id="card-layout" class="spotlight-layout">
-
             </div>
         </section>
     </main>

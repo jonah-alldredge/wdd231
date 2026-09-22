@@ -1,0 +1,33 @@
+main h2 {
+    background-color: rgb(222, 220, 255);
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+main section {
+    border-radius: 10px;
+}
+
+.spotlight-layout section div{
+    display: block;
+}
+.main-content h2{
+    margin: 0;
+    margin-top: 1rem;
+}
+.current-weather{
+    background-color: aqua;
+    padding: 10px;
+    margin: 8px;
+}
+.future-forecast {
+    background-color: aqua;
+    margin: 8px;
+}
+.events div {
+    background-color: aqua;
+    padding: 5px;
+    margin: 8px;
+    max-width: 320px;
+    
+}

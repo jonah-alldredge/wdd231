@@ -4,7 +4,9 @@ const navButton = document.querySelector("#ham-btn");
 const navBar = document.querySelector("#nav-bar");
 const weather = document.querySelector("#current-temp");
 const numbers = new Set();
+
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=40.25944752687567&lon=-111.67285201081629&appid=dda56ed3dade7f6fadc0e4fea812465a&units=imperial';
+const iconUrl = 'https://openweathermap.org/payload/api/media/file/';
 
 
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
@@ -23,7 +25,7 @@ async function getCompany() {
 
 async function createCompany() {
     const data = await getCompany();
-    while (numbers.size < 3) {
+    while (numbers.size < 2) {
         const randomNumber = Math.floor(Math.random() * 9);
         numbers.add(randomNumber);
     }
@@ -38,6 +40,7 @@ async function createCompany() {
         const email = document.createElement("p");
         const phone = document.createElement("p");
         const url = document.createElement("p");
+        const membership = document.createElement("p");
         card.appendChild(section);
         section.appendChild(name);
         section.appendChild(tagLine);
@@ -45,11 +48,14 @@ async function createCompany() {
         div.appendChild(email);
         div.appendChild(phone);
         div.appendChild(url);
+        div.appendChild(membership);
         name.textContent = data[number].name;
         tagLine.textContent = data[number].tagLine;
         email.innerHTML = `<strong>EMAIL:</strong> ${data[number].email}`;
         phone.innerHTML = `<strong>PHONE:</strong> ${data[number].phone}`;
         url.innerHTML = `<strong>URL:</strong> ${data[number].url}`;
+        membership.innerHTML = `Membership Level: <strong>${data[number].membership}</strong>`;
+
     });
 }
 
@@ -59,8 +65,8 @@ async function getTemp() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
-            displayResults(data);
+            console.log(data.list);
+            displayTemperature(data);
         } else {
             throw Error(await response.text());
         }
@@ -69,17 +75,53 @@ async function getTemp() {
     }
 };
 
-function displayResults(data) {
-    weather.textContent = `${data.main.temp}\u00B0F`;
+//numbers on weather that start the day out 0,8,16
+
+function displayTemperature(data) {
+    const p = document.querySelector("#current-forecast");
+    const temperature = data.list[0].main.temp;
+    const description = data.list[0].weather[0].description;
+    const icon = `${iconUrl}${data.list[0].weather[0].icon}.png`;
+    const img = document.querySelector("#weather-icon");
+    img.setAttribute("src", `${icon}`);
+    img.setAttribute("alt", "picture of forecast");
+    weather.textContent = `${temperature}\u00B0F`;
+    p.textContent = `Current Forecast: ${description}`;
+    futureForecast(data);
 };
 
-function spotlight() {
-    
+function futureForecast(data) {
+    const days = [0, 8, 16];
+    days.forEach(day => {
+        const parentDiv = document.querySelector("#future-forecast");
+        const div = document.createElement("div");
+        const p = document.createElement("p");
+        const p2 = document.createElement("p");
+        const img = document.createElement("img");
+        const icon = `${iconUrl}${data.list[day].weather[0].icon}.png`;
+        const temp = data.list[day].main.temp;
+        const dateText = data.list[day].dt_txt;
+        const dateFull = new Date(dateText.replace(' ', 'T'));
+        const date = dateFull.toLocaleDateString('en-US', {
+            weekday: 'short',
+            month: 'short',
+            day: 'numeric'
+        });
+        // When I get back, what I need to do is separate the date and print it in month day format
+        console.log(date);
+        img.setAttribute("src", `${icon}`);
+        img.setAttribute("alt", "picture of forecast");
+        parentDiv.appendChild(div);
+        div.appendChild(p2);
+        div.appendChild(img);
+        div.appendChild(p);
+        p2.textContent = `${date}`;
+        p.textContent = `${temp}\u00B0F`;
+    });
 }
 
 
 
 getTemp();
 createCompany();
-
 

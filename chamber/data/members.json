@@ -4,62 +4,71 @@
         "tagLine": "Innovating your digital tomorrow.",
         "email": "info@luminatech.com",
         "phone": "(555) 012-3456",
-        "url": "https://www.luminatech.com"
+        "url": "https://www.luminatech.com",
+        "membership": "Gold"
     },
     {
         "name": "Oak & Iron Carpentry",
         "tagLine": "Building strength, crafting beauty.",
         "email": "contact@oakandiron.com",
         "phone": "(555) 012-3457",
-        "url": "https://www.oakandiron.com"
+        "url": "https://www.oakandiron.com",
+        "membership": "Silver"
     },
     {
         "name": "Verdant Landscaping",
         "tagLine": "Rooted in nature, designed for you.",
         "email": "hello@verdantlandscaping.com",
         "phone": "(555) 012-3458",
-        "url": "https://www.verdantlandscaping.com"
+        "url": "https://www.verdantlandscaping.com",
+        "membership": "Silver"
     },
     {
         "name": "Starlight Logistics",
         "tagLine": "Delivering promises across the miles.",
         "email": "support@starlightlogistics.com",
         "phone": "(555) 012-3459",
-        "url": "https://www.starlightlogistics.com"
+        "url": "https://www.starlightlogistics.com",
+        "membership": "Gold"
     },
     {
         "name": "Crescent Valley Financial",
         "tagLine": "Securing your wealth, guiding your future.",
         "email": "info@crescentvalleyfin.com",
         "phone": "(555) 012-3460",
-        "url": "https://www.crescentvalleyfin.com"
+        "url": "https://www.crescentvalleyfin.com",
+        "membership": "Gold"
     },
     {
         "name": "The Daily Grind Cafe",
         "tagLine": "Brewing ambition one cup at a time.",
         "email": "hello@thedailygrindcafe.com",
         "phone": "(555) 012-3461",
-        "url": "https://www.thedailygrindcafe.com"
+        "url": "https://www.thedailygrindcafe.com",
+        "membership": "Silver"
     },
     {
         "name": "Apex Regional Health Clinic",
         "tagLine": "Compassionate care for a healthier community.",
         "email": "care@apexhealthclinic.org",
         "phone": "(555) 012-3462",
-        "url": "https://www.apexhealthclinic.org"
+        "url": "https://www.apexhealthclinic.org",
+        "membership": "Gold"
     },
     {
         "name": "Blue Horizon Marketing",
         "tagLine": "Navigating the currents of brand success.",
         "email": "team@bluehorizonmarketing.com",
         "phone": "(555) 012-3463",
-        "url": "https://www.bluehorizonmarketing.com"
+        "url": "https://www.bluehorizonmarketing.com",
+        "membership": "Silver"
     },
     {
         "name": "Precision Auto Works",
         "tagLine": "Engineering trust on every road.",
         "email": "service@precisionautoworks.com",
         "phone": "(555) 012-3464",
-        "url": "https://www.precisionautoworks.com"
+        "url": "https://www.precisionautoworks.com",
+        "membership": "Silver"
     }
 ]

@@ -89,7 +89,7 @@ main div {
     row-gap: 1rem;
     margin: 1rem 0 1rem 0;
 }
-.card-layout section{
+.card-layout section, .spotlight-layout section{
     background-color: aqua;
     border-radius: 10px;  
     margin: 0.5rem auto 0.5rem;
@@ -123,16 +123,29 @@ main div {
 
 
 /*****************  HOME PAGE CARD LAYOUT   *******************/
-
-main h2 {
-    background-color: rgb(222, 220, 255);
-    padding: 1rem;
-    border-radius: 10px 10px 0 0;
+.spotlight-layout{
+    display: grid;
 }
-
-main section {
-    background-color: aqua;
-    border-radius: 10px;
+.main-content {
+    display: grid;
+}
+.weather-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.future-forecast{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.future-forecast h3 {
+    grid-column: 1/-1;
+}
+.weather-box{
+    display: grid;
+}
+.events {
+    display: grid;
+    justify-items: center;
 }
 
 /***************    Footer    ***************/

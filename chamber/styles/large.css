@@ -23,10 +23,19 @@
 
 
     /****************   HOME PAGE CARD LAYOUT   *********************/
-       
-        
-
-
+       .spotlight div{
+            display: flex;
+       }
+       .main-content {
+            display: flex;
+            justify-content: space-evenly;
+       }
+        .weather-box {
+            display: flex;
+        }
+        .events {
+            display: flex;
+        }
     /****************   Footer    *****************/
         footer div {
             display: flex;
@@ -43,7 +52,7 @@
     .card-layout {
         grid-template-columns: repeat(3, auto);
     }
-        footer div {
-            justify-content: space-evenly;
-        }
+    footer div {
+        justify-content: space-evenly;
+    }
 }

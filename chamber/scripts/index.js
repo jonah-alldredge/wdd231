@@ -59,7 +59,7 @@ async function createCard() {
         email.innerHTML = `<strong>EMAIL:</strong> ${company.email}`;
         phone.innerHTML = `<strong>PHONE:</strong> ${company.phone}`;
         url.innerHTML = `<strong>URL:</strong> ${company.url}`;
-    })
+    });
 };
 
 createCard();
