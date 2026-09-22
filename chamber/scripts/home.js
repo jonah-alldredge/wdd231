@@ -91,7 +91,7 @@ function displayTemperature(data) {
 };
 
 function futureForecast(data) {
-    const days = [0, 8, 16];
+    const days = [4, 12, 20];
     days.forEach(day => {
         const parentDiv = document.querySelector("#future-forecast");
         const div = document.createElement("div");

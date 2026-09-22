@@ -93,7 +93,7 @@ main div {
     background-color: aqua;
     border-radius: 10px;  
     margin: 0.5rem auto 0.5rem;
-    width: 420px;
+    width: 320px;
     height: 261px;
 }
 .card-layout h3, p {
@@ -123,25 +123,62 @@ main div {
 
 
 /*****************  HOME PAGE CARD LAYOUT   *******************/
-.spotlight-layout{
-    display: grid;
+.hero {
+    position: relative;
+    max-width: 75%;
+    margin: auto;
+    /* width: 100%; */
+    z-index: 5;
 }
-.main-content {
-    display: grid;
+
+.hero,
+.hero-image {
+    width: 100%;
+    height: auto;
 }
-.weather-box{
-    display: flex;
-    justify-content: space-evenly;
+
+.hero-image {
+    object-fit: cover;
+}
+
+.hero h2,
+.hero a {
+    /* Minimum 10px, scales at 2% of Viewport width, maximum 2rem */
+    font-size: clamp(10px, 2vw, 2rem);
+}
+.hero h2 {
+    position: absolute;
+    background-color: transparent;
+    margin: 0;
+    max-width: 30vw;
+    object-fit: cover;
+    left: -10px;
+    top: -10px;
+
+}
+
+.hero a {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    text-decoration: none;
+    color: black;
+}
+.spotlight-layout, .main-content{
+    display: grid;
 }
 .future-forecast{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background-color: aqua;
+    margin: 8px;
 }
 .future-forecast h3 {
     grid-column: 1/-1;
 }
 .weather-box{
     display: grid;
+    justify-content: space-evenly;
 }
 .events {
     display: grid;

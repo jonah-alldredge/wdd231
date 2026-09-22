@@ -20,6 +20,9 @@
             display: grid;
             grid-template-columns: repeat(2, auto);
         }
+        .card-layout section, .spotlight-layout section {
+            width: 420px;
+        }
 
 
     /****************   HOME PAGE CARD LAYOUT   *********************/
@@ -33,9 +36,18 @@
         .weather-box {
             display: flex;
         }
-        .events {
-            display: flex;
+        .hero h2 {
+            left: 0;
+            top: 0;
+            width: 100%;
         }
+        .hero a {
+            left: 23%;
+            top: 22%;
+        }
+
+        
+        
     /****************   Footer    *****************/
         footer div {
             display: flex;
@@ -52,6 +64,9 @@
     .card-layout {
         grid-template-columns: repeat(3, auto);
     }
+    .events {
+            display: flex;
+        }
     footer div {
         justify-content: space-evenly;
     }

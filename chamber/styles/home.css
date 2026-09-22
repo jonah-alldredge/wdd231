@@ -8,6 +8,12 @@ main section {
     border-radius: 10px;
 }
 
+.hero a:hover {
+    color: rgb(222, 220, 255);
+    text-decoration: underline;
+}
+
+
 .spotlight-layout section div{
     display: block;
 }
@@ -20,14 +26,9 @@ main section {
     padding: 10px;
     margin: 8px;
 }
-.future-forecast {
-    background-color: aqua;
-    margin: 8px;
-}
 .events div {
     background-color: aqua;
     padding: 5px;
     margin: 8px;
     max-width: 320px;
-    
 }
