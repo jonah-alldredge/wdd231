@@ -65,7 +65,7 @@ async function getTemp() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data.list);
+            // console.log(data.list);
             displayTemperature(data);
         } else {
             throw Error(await response.text());
@@ -78,13 +78,16 @@ async function getTemp() {
 //numbers on weather that start the day out 0,8,16
 
 function displayTemperature(data) {
-    const p = document.querySelector("#current-forecast");
+    const div = document.querySelector("#current-weather");
+    const p = document.createElement("p");
+    const img = document.createElement("img");
     const temperature = data.list[0].main.temp;
     const description = data.list[0].weather[0].description;
     const icon = `${iconUrl}${data.list[0].weather[0].icon}.png`;
-    const img = document.querySelector("#weather-icon");
     img.setAttribute("src", `${icon}`);
     img.setAttribute("alt", "picture of forecast");
+    div.appendChild(p);
+    div.appendChild(img);
     weather.textContent = `${temperature}\u00B0F`;
     p.textContent = `Current Forecast: ${description}`;
     futureForecast(data);
@@ -107,8 +110,7 @@ function futureForecast(data) {
             month: 'short',
             day: 'numeric'
         });
-        // When I get back, what I need to do is separate the date and print it in month day format
-        console.log(date);
+        // console.log(date);
         img.setAttribute("src", `${icon}`);
         img.setAttribute("alt", "picture of forecast");
         parentDiv.appendChild(div);

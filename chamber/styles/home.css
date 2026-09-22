@@ -12,8 +12,10 @@ main section {
     color: rgb(222, 220, 255);
     text-decoration: underline;
 }
-
-
+.weather-box img{
+    width: auto;
+    height: auto;
+}
 .spotlight-layout section div{
     display: block;
 }
