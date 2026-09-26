@@ -1,0 +1,169 @@
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeColor{
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+
+/*
+animation: mySlide;
+animation-iteration-count: infinite; - Amount of times it loops - You can also set it to 1,2,3...
+animation-play-state: running; - You can -- Default is running but you can also set it paused -- Alternate makes the animation alternate directions on each cycle
+animation-delay: 1s; - amount of time it is delayed
+animation-timing-function: ease; - Ease in: slowly accelerates - Ease Out starts fast and then slows down -Ease-in-out
+animation-duration: 5s;
+
+animation: duration, timing, delay, iteration-count, play-state, animationFunction;
+animation: 3s linear 0s infinite running mySlide;
+
+#box1:hover {
+    animation: 3s linear 0s infinite running mySlide;
+}
+
+@key-frames mySlide {
+    from{margin-left: 100%;}
+    to{margin-left: 0%;}
+
+
+*/
+
+                /* ANIMATION */
+.box {
+    /* This declaration is the same as the first above */
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+.box {
+    /* Does the same animation as the fadeColor keyFrame above */
+    width: 150px;
+    height: 150px;
+    background-color: red;
+
+    /* Use the shorthand animation property */
+    animation: fadeColor 2s ease-in-out infinite alternate;
+}
+
+                /* TRANSITION */
+/* When the use hovers over the box it slowly turns to light blue */
+.box {
+    background-color: white;
+    border: 1px solid #ccc;
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: lightblue;
+}
+
+/* When the user hovers over the box it will grow in width and height after slight delay */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    transition: width 0.3s ease-in-out 0.2s, height 0.3s ease-in-out 0.2s;
+}
+.box:hover{
+    width: 150px;
+    height: 150px;
+}
+
+                /* TRANSFORM */
+/* transition from a white background to a light blue over 5 seconds when the user hovers */
+
+/* 
+    Translate(x,y): moves the element left/right (x) and up/down (y)
+    rotate(angle): rotates the element by a specified angle - rotate(45deg)
+    scale(x,y): resizes the element - scale(1.5) makes it 150% larger
+    skew(x-angle, y-angle): skews the element along the x or y axis
+*/
+.box {
+    transform: rotate(15deg) translateX(20px) scale(1.2);
+}
+
+
+
+#loader {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent; /* Border Colors: (4 - 2 transparent)*/
+    border-radius: 50%; /* Make it round */
+    animation: spin 1.5s linear infinite; /* spin animation with duration and continuous */
+    box-shadow: 0 0 1rem rgb(0,0, 255); /* blueish shadow effect on round div */
+}
+
+#loader::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+/* ⚙️ */
+
+#hover-loader {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 5px solid transparent;
+    border-color: white transparent white transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgb(0,0, 255);
+    transition: spin 1.5s linear infinite;
+}
+
+#hover-loader::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    /* font-size: 2rem; */
+}
+
+#hover-loader:hover{
+    transform: rotate(360deg); 
+}
+
+#hover-loader:hover::after{
+    transform: translate(-50%, -50%) scale(1.5);
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+    /*Spins 360 degrees*/
+    /*The 100% tells it how far to spin, if it were 50% it would spin halfway and then spin back*/
+}
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* scale to 1 */
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}

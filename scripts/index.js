@@ -7,6 +7,7 @@ const totalCourses = document.querySelector("#courses");
 const allButton = document.querySelector("#all-courses");
 const wddButton = document.querySelector("#wdd-courses");
 const cseButton = document.querySelector("#cse-courses");
+const modal = document.querySelector("#classDialog");
 
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 document.getElementById("currentYear").textContent = currentYear;
@@ -15,8 +16,6 @@ navButton.addEventListener('click', () => {
     navButton.classList.toggle('show');
     navBar.classList.toggle('show');
 })
-
-
 
 const courses = [
     {
@@ -136,15 +135,21 @@ function createClass(filteredClass) {
     filteredClass.forEach(course => {
         const classes = document.getElementById("classes");
         const div = document.createElement("div");
+        const button = document.createElement("button");
         const text = document.createElement("p");
         classes.appendChild(div);
-        div.appendChild(text);
+        div.appendChild(button);
+        // classes.appendChild(button);
         let complete = "";
         if (isComplete(course)) {
             complete = "\u2713";
         }
-        text.textContent = `${complete}${course.subject} ${course.number}`;
+        button.textContent = `${complete}${course.subject} ${course.number}`;
+        button.addEventListener('click',() => {
+            displayModal(course);
+        })
     });
+
 }
 
 function totalNumCredits(accumulator, element) {
@@ -153,4 +158,22 @@ function totalNumCredits(accumulator, element) {
 
 function isComplete(course) {
     return course.completed;
+}
+
+function displayModal(course) {
+    modal.innerHTML = '';
+    modal.innerHTML = `
+    <button id='closeModal'>❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    modal.showModal();
+
+    closeModal.addEventListener('click', () => {
+        modal.close();
+    })
 }
