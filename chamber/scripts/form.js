@@ -15,6 +15,7 @@ const goldBtn = document.querySelector("#gold-button");
 const goldModal = document.querySelector('#gold-modal');
 const goldCloseBtn = document.querySelector("#gold-close");
 
+document.getElementById("timestamp").value = new Date.toISOString();
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 document.getElementById("currentYear").textContent = currentYear;
 

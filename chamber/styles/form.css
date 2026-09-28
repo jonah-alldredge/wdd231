@@ -26,13 +26,10 @@ label {
 }
 input[type=submit]{
     background-color: rgb(222, 220, 255);
-    /* margin-bottom: 1rem;
-    margin-left: 2rem;  */
     margin: 0 0 1rem 2rem;
     padding: 10px;
     align-self: center;
     border-radius: 10px;
-    /* border: none; */
 }
 input[type=radio]{
     margin-left: 1rem;
@@ -103,7 +100,6 @@ section button {
         margin-bottom: 0%;
     }
 }
-/* I need to figure out how to make the animations go at the same time*/
 /****************** THANK YOU FORM  ***********************/
 #thank-you {
     margin: auto;

@@ -40,11 +40,11 @@
             <h2>Membership Application Form</h2>
             <label>First Name <input type="text" name="first" autocomplete="given-name"  title="Your First Name" required></label>
             <label>Last Name <input type="text" name="last" autocomplete="family-name"  title="Your Last Name" required></label>
-            <label>Organization Name <input type="text" autocomplete="organization-title"></label>
-            <label>Email <input type="email" name="email" autocomplete="email" placeholder="555-555-555" title="Your Email" required></label>
-            <label>Cell Phone <input type="tel" name="phone" autocomplete="tel" placeholder="john89@gmail.com" title="A Phone Number with dashes" required></label>
-            <label>Business Name <input type="text" name="organization" autocomplete="organization" title="Business Name" required></label>
-            <label>Business Description <textarea name="description" title="The business description" rows="3"></textarea></label>
+            <label>Organization Title <input type="text" name="title" autocomplete="organization-title" title="The Organization Title" pattern="[A-Za-z/s/-]{8,}"></label>
+            <label>Email <input type="email" name="email" autocomplete="email" placeholder="john89@gmail.com" title="Your Email" required></label>
+            <label>Cell Phone <input type="tel" name="phone" autocomplete="tel" placeholder="555-555-555" title="A Phone Number with dashes" required></label>
+            <label>Organization Name <input type="text" name="name" autocomplete="organization" title="Business Name" required></label>
+            <label>Organization Description <textarea name="description" title="The business description" rows="3"></textarea></label>
             <fieldset>
                 <legend>Membership Level</legend>
                 <label><input type="radio" name="membership" title="Non-Profit Membership" value="np">Non-Profit</label>
@@ -53,6 +53,7 @@
                 <label><input type="radio" name="membership" title="Gold Membership" value="gold">Gold</label>
             </fieldset>
             <input type="submit" value="Join the Team!" name="submit">
+            <input type="hidden" name="timestamp" id="timestamp">
         </form>
         <div>
             <h2>Membership Levels</h2>
