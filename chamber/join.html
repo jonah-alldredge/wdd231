@@ -34,9 +34,9 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="join">
         <h1>Join</h1>
-        <form method="get" action="thankyou.html">
+        <form method="GET" action="thankyou.html">
             <h2>Membership Application Form</h2>
             <label>First Name <input type="text" name="first" autocomplete="given-name"  title="Your First Name" required></label>
             <label>Last Name <input type="text" name="last" autocomplete="family-name"  title="Your Last Name" required></label>
@@ -44,17 +44,80 @@
             <label>Email <input type="text" name="email" autocomplete="email" placeholder="555-555-555" title="Your Email" required></label>
             <label>Cell Phone <input type="tel" name="phone" autocomplete="tel" placeholder="john89@gmail.com" title="A Phone Number with dashes"></label>
             <label>Business Name <input type="text" name="organization" autocomplete="organization" required></label>
-            <label>Business Description <textarea type="textarea" name="description" title="The business description"></textarea></label>
-            <label>Membership</label>
-            <label><input type="radio" name="membership">Non-Profit</label>
-            <label><input type="radio" name="membership">Bronze</label>
-            <label><input type="radio" name="membership">Silver</label>
-            <label><input type="radio" name="membership">Gold</label>
+            <label>Business Description <textarea name="description" title="The business description" rows="3"></textarea></label>
+            <label>Membership Level</label>
+            <label><input type="radio" name="membership" title="Non-Profit Membership" value="Non-Profit">Non-Profit</label>
+            <label><input type="radio" name="membership" title="Bronze Membership" value="Bronze">Bronze</label>
+            <label><input type="radio" name="membership" title="Silver Membership" value="Silver">Silver</label>
+            <label><input type="radio" name="membership" title="Gold Membership" value="Gold">Gold</label>
             <input type="submit" value="Join the Team!" name="submit">
         </form>
         <div>
             <h2>Membership Levels</h2>
-
+            <div class="membership-layout">
+            <section class="membership">
+                <h2>Non-Profit Membership Level</h2>
+                <button id="non-button" class="btn">Learn More!</button>
+                <dialog id="non-modal">
+                    <h2>Non-Profit Membership Level</h2>
+                    <ul>
+                        <li>Access to general chamber networking events</li>
+                        <li>Basic organization listing in the community directory</li>
+                        <li>Posting privileges on the public community bulletin board</li>
+                        <li><strong>Cost:</strong> Free ($0/month)</li>
+                    </ul>
+                    <button id="non-close" class="btn">Close</button>
+                </dialog>
+            </section>
+            <section class="membership">
+                <h2>Bronze Membership Level</h2>
+                <button id="bronze-button" class="btn">Learn More!</button>
+                <dialog id="bronze-modal">
+                    <h2>Bronze Membership Level</h2>
+                    <ul>
+                        <li>Includes all Non-Profit level benefits</li>
+                        <li>Standard business directory listing with direct website link</li>
+                        <li>Access to member-to-member discount and referral programs</li>
+                        <li>10% discount on paid chamber workshop tickets</li>
+                        <li><strong>Cost:</strong> $10/month</li>
+                    </ul>
+                    <button id="bronze-close" class="btn">Close</button>
+                </dialog>
+            </section>
+            <section class="membership">
+                <h2>Silver Membership Level</h2>
+                <button id="silver-button" class="btn">Learn More!</button>
+                <dialog id="silver-modal">
+                    <h2>Silver Membership Level</h2>
+                    <ul>
+                        <li>Includes all Bronze level benefits</li>
+                        <li>Enhanced directory listing featuring your company logo and description</li>
+                        <li>Quarterly social media promotional shout-outs and newsletter features</li>
+                        <li>15% discount on all paid chamber events and advertising spaces</li>
+                        <li>Invitation to exclusive quarterly business growth workshops</li>
+                        <li><strong>Cost:</strong> $20/month</li>
+                    </ul>
+                    <button id="silver-close" class="btn">Close</button>
+                </dialog>
+            </section>
+            <section class="membership">
+                <h2>Gold Membership Level</h2>
+                <button id="gold-button" class="btn">Learn More!</button>
+                <dialog id="gold-modal">
+                    <h2>Gold Membership Level</h2>
+                    <ul>
+                        <li>Includes all Silver level benefits</li>
+                        <li>Premium homepage spotlight positioning and featured directory ranking</li>
+                        <li>Priority sponsorship opportunities for annual summits and expos</li>
+                        <li>25% discount and complimentary VIP seating at all paid events</li>
+                        <li>Direct access to monthly executive leadership roundtables</li>
+                        <li><strong>Cost:</strong> $30/month</li>
+                    </ul>
+                    <button id="gold-close" class="btn">Close</button>
+                </dialog>
+            </section>
+                
+            </div>
         </div>
     </main>
     <footer>

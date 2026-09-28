@@ -1,20 +1,101 @@
-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+.join {
+    display: block;
 }
 h1 {
     grid-column: 1/-1;
-}
-form {
-    grid-column: 1;
+    margin: 1rem;
 }
 
+/****************   FORM    ********************/
+form {
+    grid-column: 1;
+    background-color: aqua;
+    margin: 1rem;
+    border-radius: 10px;
+}
+h2{
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(222, 220, 255);
+    border-radius: 10px 10px 0 0;
+}
 label {
     display: block;
     margin: 1rem;
 }
+input[type=submit]{
+    background-color: rgb(222, 220, 255);
+    /* margin-bottom: 1rem;
+    margin-left: 2rem;  */
+    margin: 0 0 1rem 2rem;
+    padding: 10px;
+    align-self: center;
+    border-radius: 10px;
+    /* border: none; */
+}
+input[type=radio]{
+    margin-left: 1rem;
+}
+input[type=text],
+input[type=tel],
+input[type=date],
+input[type=email],
+textarea,
+select {
+    display: block;
+    margin: 0 1rem 0 0;
+}
+
+
+/***************    MEMBERSHIP LEVELS   *****************/
+.join div{
+    margin: 1rem;
+}
+dialog ul{
+    background-color: aqua;
+    margin: 0 0 10px 0;
+    border-radius: 0 0 10px 10px;
+}
+dialog li {
+    padding: 1rem;
+    text-align: left;
+}
+.btn{
+    background-color: rgb(222, 220, 255);
+    border-radius: 10px;
+}
+.join section {
+    background-color: aqua;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+section button {
+    margin: 1rem;
+}
+
+/****************** THANK YOU FORM  ***********************/
+#thank-you {
+    margin: auto;
+}
+#results h2{
+    text-align: center;
+    padding: 1rem;
+}
+#results p{
+    padding: 10px;
+}
+#results {
+    background-color: aqua;
+    border-radius: 10px;
+    max-width: 50%;
+    margin: auto;
+}
 
 
 @media only screen and (min-width: 900px){
-
+    .join {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
 }
