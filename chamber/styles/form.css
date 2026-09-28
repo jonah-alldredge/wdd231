@@ -49,6 +49,15 @@ select {
 
 
 /***************    MEMBERSHIP LEVELS   *****************/
+fieldset{
+    border: none;
+    margin: 1rem;
+    padding: 0;
+}
+fieldset label {
+    margin: 0;
+    padding: 5px 0 5px 0;
+}
 .join div{
     margin: 1rem;
 }
@@ -73,7 +82,28 @@ dialog li {
 section button {
     margin: 1rem;
 }
-
+.membership-layout {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-name: fadeIn;
+    animation: slide 0.75s ease-in-out, fadeIn 1s linear; 
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes slide{
+    from {
+        margin-top: 50%;
+    } to {
+        margin-bottom: 0%;
+    }
+}
+/* I need to figure out how to make the animations go at the same time*/
 /****************** THANK YOU FORM  ***********************/
 #thank-you {
     margin: auto;

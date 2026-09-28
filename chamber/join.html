@@ -40,16 +40,18 @@
             <h2>Membership Application Form</h2>
             <label>First Name <input type="text" name="first" autocomplete="given-name"  title="Your First Name" required></label>
             <label>Last Name <input type="text" name="last" autocomplete="family-name"  title="Your Last Name" required></label>
-            <label>Organization Name <input type="text"></label>
-            <label>Email <input type="text" name="email" autocomplete="email" placeholder="555-555-555" title="Your Email" required></label>
-            <label>Cell Phone <input type="tel" name="phone" autocomplete="tel" placeholder="john89@gmail.com" title="A Phone Number with dashes"></label>
-            <label>Business Name <input type="text" name="organization" autocomplete="organization" required></label>
+            <label>Organization Name <input type="text" autocomplete="organization-title"></label>
+            <label>Email <input type="email" name="email" autocomplete="email" placeholder="555-555-555" title="Your Email" required></label>
+            <label>Cell Phone <input type="tel" name="phone" autocomplete="tel" placeholder="john89@gmail.com" title="A Phone Number with dashes" required></label>
+            <label>Business Name <input type="text" name="organization" autocomplete="organization" title="Business Name" required></label>
             <label>Business Description <textarea name="description" title="The business description" rows="3"></textarea></label>
-            <label>Membership Level</label>
-            <label><input type="radio" name="membership" title="Non-Profit Membership" value="Non-Profit">Non-Profit</label>
-            <label><input type="radio" name="membership" title="Bronze Membership" value="Bronze">Bronze</label>
-            <label><input type="radio" name="membership" title="Silver Membership" value="Silver">Silver</label>
-            <label><input type="radio" name="membership" title="Gold Membership" value="Gold">Gold</label>
+            <fieldset>
+                <legend>Membership Level</legend>
+                <label><input type="radio" name="membership" title="Non-Profit Membership" value="np">Non-Profit</label>
+                <label><input type="radio" name="membership" title="Bronze Membership" value="bronze">Bronze</label>
+                <label><input type="radio" name="membership" title="Silver Membership" value="silver">Silver</label>
+                <label><input type="radio" name="membership" title="Gold Membership" value="gold">Gold</label>
+            </fieldset>
             <input type="submit" value="Join the Team!" name="submit">
         </form>
         <div>
