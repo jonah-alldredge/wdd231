@@ -80,7 +80,7 @@ section button {
     margin: 1rem;
 }
 .membership-layout {
-    animation: slide 0.75s ease-in-out, fadeIn 1s linear; 
+    animation: slide 0.75s ease-in-out; 
 }
 @keyframes fadeIn {
     from{
