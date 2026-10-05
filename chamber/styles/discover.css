@@ -29,10 +29,6 @@
   margin: 1rem 10px;
   grid-area: description;
 }
-.place-card img:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 10px black;
-}
 #allPlaces {
   display: grid;
 }
@@ -55,8 +51,11 @@
   }
   .place-layout {
     display: grid;
-
   }
+  .place-card img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 10px black;
+    }
 }
 @media only screen and (min-width: 1300px){
   .place-layout{
