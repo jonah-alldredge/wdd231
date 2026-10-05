@@ -1,0 +1,63 @@
+main div{
+  margin: auto;
+}
+
+.place-card{
+  width: 300px;
+  background-color: aqua;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-areas: 
+  "name"
+  "photograph"
+  "description"
+  "location";
+
+}
+.place-card img {
+  width: 100%;
+  grid-area: photograph;
+}
+.place-card h2 {
+  margin: 1rem 10px;
+  grid-area: name;
+}
+.place-card address {
+  margin: 1rem 10px;
+  grid-area: location;
+}
+.place-card p {
+  margin: 1rem 10px;
+  grid-area: description;
+}
+.place-card img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 10px black;
+}
+
+@media only screen and (min-width: 38rem) {
+  .place-card{
+    margin: 1rem;
+    width: auto;
+    grid-template-areas:
+    "photograph name"
+    "photograph description"
+    "photograph location";
+  }
+  .place-card img{
+    width: 300px;
+  }
+  #allPlaces {
+    display: grid;
+
+  }
+}
+@media only screen and (min-width: 1300px){
+  #allPlaces {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+}
