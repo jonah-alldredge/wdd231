@@ -25,6 +25,7 @@ function displayItems(places) {
     const thePhoto = document.createElement('img');
     thePhoto.src = `${place.photo_url}`;
     thePhoto.alt = place.name;
+    thePhoto.loading = 'lazy';
     theCard.appendChild(thePhoto);
     const theTitle = document.createElement('h2');
     theTitle.innerText = place.name;
