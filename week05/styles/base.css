@@ -16,7 +16,9 @@ Color Scheme:
 FONT: Anonymous Pro
 
 */
-
+main {
+  font-family: 'Anonymous Pro', monospace;
+}
 header, footer{
   background-color: gray;
   color: white;
