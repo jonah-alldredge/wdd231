@@ -1,0 +1,108 @@
+{
+  "friends": [
+    {
+      "name": "Kyson Childs",
+      "status": "Free tonight",
+      "location": "Provo, UT",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Photo of Kyson Childs"
+    },
+    {
+      "name": "Jonathan Todd",
+      "status": "Free Saturday",
+      "location": "Orem, UT",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Photo of Jonathan Todd"
+    },
+    {
+      "name": "Jonah Alldredge",
+      "status": "Busy until 6 PM",
+      "location": "Salt Lake City, UT",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Photo of Jonah Alldredge"
+    },
+    {
+      "name": "Emma Carter",
+      "status": "Free tonight",
+      "location": "Lehi, UT",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Photo of Emma Carter"
+    },
+    {
+      "name": "Marcus Lee",
+      "status": "Free Sunday",
+      "location": "American Fork, UT",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Photo of Marcus Lee"
+    },
+    {
+      "name": "Sofia Ramirez",
+      "status": "Busy until 8 PM",
+      "location": "Springville, UT",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Photo of Sofia Ramirez"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Timpanogos Cave National Monument",
+      "bio": "A cave system in American Fork Canyon reached by a steep paved trail. Guided tours show off colorful formations, and tickets usually need to be booked ahead.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Cave formations inside Timpanogos Cave"
+    },
+    {
+      "name": "Bridal Veil Falls",
+      "bio": "A two-tiered waterfall tucked into Provo Canyon. It is a short walk from the parking area, which makes it an easy stop with friends any time of year.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Bridal Veil Falls in Provo Canyon"
+    },
+    {
+      "name": "Thanksgiving Point",
+      "bio": "A Lehi campus with large gardens, a farm, and a natural history museum. Easy to spend a whole afternoon walking around together.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Gardens at Thanksgiving Point"
+    },
+    {
+      "name": "Utah Lake State Park",
+      "bio": "A Provo marina on one of the biggest lakes in Utah. Rent a kayak or paddleboard, go fishing, or watch the sunset over the water.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Boats at Utah Lake State Park marina"
+    },
+    {
+      "name": "Seven Peaks Water Park",
+      "bio": "A Provo water park with slides and a wave pool. It is seasonal, so check the opening dates before you plan a group trip.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Water slides at Seven Peaks Water Park"
+    },
+    {
+      "name": "Rock Canyon Trail",
+      "bio": "A popular Provo trail that leads into a canyon right at the edge of town. Short enough for an evening hike, with views of the valley.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Hikers on Rock Canyon Trail"
+    },
+    {
+      "name": "Sundance Mountain Resort",
+      "bio": "A resort in Provo Canyon known for skiing in winter and for hiking and scenic views the rest of the year.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Mountain scenery at Sundance Resort"
+    },
+    {
+      "name": "SCERA Shell Outdoor Theatre",
+      "bio": "An outdoor amphitheater in Orem that hosts summer concerts, movies, and shows. Bring a blanket and enjoy a night out with friends.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Audience at the SCERA Shell Outdoor Theatre"
+    },
+    {
+      "name": "Provo River Trail",
+      "bio": "A paved trail that follows the Provo River through Provo and into the canyon. Good for walking, biking, or an easy evening stroll with friends.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Paved trail beside the Provo River"
+    },
+    {
+      "name": "Springville Museum of Art",
+      "bio": "A Springville museum known for its collection of Utah artists and rotating exhibits. A relaxed indoor option when the weather is bad.",
+      "image": "images/draper-temple.jpg",
+      "imageAlt": "Front of the Springville Museum of Art"
+    }
+  ]
+}
