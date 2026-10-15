@@ -1,0 +1,61 @@
+/*
+Color Scheme:
+  DARK MODE:
+    *Background: #121212 
+    *Cards/surfaces: #1E1E1E 
+    Borders: #3f3f46 
+    *Main text: #f4f4f5 
+    *Secondary text: #a1a1aa 
+
+  LIGHT MODE:
+    Background: #FDFCFB 
+    Cards: #FFFFFF 
+    Main text: #27272a 
+    Secondary text: #71717a
+
+FONT: Anonymous Pro
+
+*/
+main {
+  font-family: 'Anonymous Pro', monospace;
+}
+
+header,
+footer {
+  background-color: #121212;
+  color: #f4f4f5;
+  padding: 1rem;
+}
+
+section {
+  background-color: #1E1E1E;
+  color: #f4f4f5;
+}
+
+.hero-image {
+  width: auto;
+  border: black 1px solid;
+  height: 500px;
+  text-align: center;
+  align-content: center;
+}
+.hero-image h1 {
+  color: #a1a1aa;
+}
+
+.sign-up {
+  height: 250px;
+}
+
+.info {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.activity {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+}
