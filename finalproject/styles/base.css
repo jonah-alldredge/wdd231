@@ -353,6 +353,14 @@ main {
   overflow-wrap: anywhere;
 }
 
+.credits a {
+  text-decoration: none;
+  color: var(--text);
+}
+.credits a:hover {
+  text-decoration: underline;
+}
+
 
 
 /* Modal */
